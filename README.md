@@ -13,23 +13,22 @@ Luego de abrir el correo encuentras un mail de tu Líder Técnico con tu primera
 > 1. Realizar un Fork del presente repositorio
 > 2. Realizar un clone del presente repositorio
 > 3. Instalar las dependencias
-> 4. Solicitar el proyecto de backend y las variables de entorno que contiene la conexion string a mongodb
-> 5. Ejecutar el servidor web (backend) con la api REST se puede ejecutar con npm start-dev si queres trabajar con nodemon (tendrías que instalarlo) con start solo, también funciona.
->    El backend se conecta con una base de datos Mongodb en la cual se encuentra la base de datos **sample_analytics** con las collections llamadas **accounts**, **customers** y **transactions** que contienen las transacciones de 5000 clientes. Por ahora trabajaremos con **customers**
-> 6. Proba el endpoint que ya se encuentra desarrollado: /api/customers debería retornar un json con los 5000 clientes. Esta implementado el paginado, aunque es totalmente opcional. Sí por algun motivo no llegase a funcionar, solicita asistencia.
+> 4. Solicitar los end-points (API) del proyecto de backend
+> 5. Probar los end-points
+>    El backend se conecta con una base de datos Mongodb en la cual se encuentra la base de datos **sample_analytics** con las collections llamadas **accounts**, **customers** y **transactions** que contienen las transacciones de 5000 clientes. Por ahora trabajaremos con **customers** y **accounts**
 
 > ### TUS TAREAS SON LAS SIGUIENTES POR ORDEN DE PRIORIDAD
 >
-> 1. Necesitamos conectar el proyecto de React con el backend, mostrar un listado de los usuarios (no te preocupes por el diseño estético)
+> 1. Necesitamos conectar el proyecto de React con el backend, mostrar un listado de los customers (no te preocupes por el diseño estético)
 > 2. Una vez realizado el punto anterior necesitamos crear un componente llamado **Customer** que muestre los siguientes datos del cliente:
 >    > "username", "name", "address", "birthdate", "email", "accounts"
 >    > No te preocupes por el diseño estético, pero si por la "prolijidad"
-> 3. Hay algunos clientes que tienen un determinado nivel (por ejemplo "Silver", "Gold", etc). Necesitamos un componente que muestre un listado de los que tienen nivel **Gold** con sus correspondientes beneficios.
+> 3. Tenemos que crear un componente Account que muestre detalles de la cuenta, **limit** y **products** . Para esto deberías convertir en un link el numero de cuenta en el componente Customer, para que haciendo clic en ese link se redirija a una pagina con la información de la cuenta.
+> 4. Hay algunos clientes que tienen alguna de sus cuentas con limites inferiores a 10000. Necesitamos que el componente Customer identifique de alguna forma esos clientes.
 
 > ### SI TE DA EL TIEMPO DAME UN MANO TAMBIEN EN...
 >
-> 5. Darle al punto 1 formato de tabla, y agregar un link en username para que lleve a una pagina donde muestre los datos de ese cliente.
-> 6. Darle a los componentes un diseño estético, podrías usar algun framework de React para controles.
+> 5. Darle a los componentes un diseño estético, podrías usar algun framework de React para controles.
 >
 > Desde ya muchas gracias por la colaboración! 😉 como te comente en la entrevista soy muy detallista en la prolijidad del codigo y la performance cada detalle cuenta, no me gusta mucho las cosas rebuscadas y complicadas y codigo dificil de leer, sin embargo si no estas seguro, es mejor que lo resuelvas como puedas y me dejes notas en el readme.md del repo, para que yo pueda probar.
 
@@ -44,6 +43,9 @@ Si ya terminaste o son las 10:00 asegurate de seguir los siguientes pasos para l
 
 ## Listado de endpoint
 
--GET /api/customers?pageSize=[pageSize]&page=[page]
+-GET /api/customers?pageSize=pageSize&page=page
+-GET /api/custoers/:id
+-GET /api/accounts?pageSize=pageSize&page=page
+-GET /api/accounts/:id
 
 ## Notas para la ejecución
