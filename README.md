@@ -1,6 +1,6 @@
 # PROGRAMACIÓN EN NUEVAS TECNOLOGIAS 2
 
-## Instrucciones de resolución del examen recuperatorio
+## Instrucciones de resolución del examen
 
 Es tu primer día en [tecnoshare.com](http://tecnoshare.com) luego de un intenso entrenamiento de 10 semanas por fin tenes la oportunidad de mostrar lo que aprendiste, y tu potencial como desarrollador frontend con React.
 
