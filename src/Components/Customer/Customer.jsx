@@ -14,7 +14,7 @@ const Customer = (props) => {
           <h3>Cuentas: </h3>
 
           <ul>
-            {props.Accounts.map((account) => (
+            {props.accounts.map((account) => (
               <li>
                 <Link to={`/accounts/${account._id}`}>
                   Ver detalles de la cuenta {account.account_id}

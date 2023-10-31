@@ -7,7 +7,7 @@ const CustomerPage = (props) => {
 
   useEffect(() => {
     fetch(
-      "https://analyticsbackendort.azurewebsites.net/api/customers?pageSize=10&page=2"
+      "https://analyticsbackendort.azurewebsites.net/api/customers?pageSize=pageSize&page=page"
     )
       .then((response) => response.json())
       .then((data) => {

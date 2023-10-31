@@ -6,7 +6,7 @@ const Customer = (props) => {
   const [account, setAccount] = useState([]);
 
   useEffect(() => {
-    fetch(`https://analyticsbackendort.azurewebsites.net/api/accounts/${id}`)
+    fetch(`https://analyticsbackendort.azurewebsites.net/api/accounts/:id`)
       .then((response) => response.json())
       .then((data) => {
         setAccount(data);
@@ -19,7 +19,7 @@ const Customer = (props) => {
       <div>
         <ul key={account._id}>
           <li>
-            <strong>limit:</strong> {account.limit}
+            <strong>limit: {account.limit}</strong>
           </li>
           <li>
             <strong>products:</strong> {JSON.stringify(account.products)}

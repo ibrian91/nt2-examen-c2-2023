@@ -7,6 +7,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<CustomerPage />} />
+        <Route path="/accounts/:accountId" element={<Account />} />
         <Route path="/account/:customerId/:accountId" element={<Account />} />
       </Routes>
     </BrowserRouter>
